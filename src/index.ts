@@ -6,7 +6,7 @@ import helmet from 'helmet'
 
 
 //Importing .env validation 
-import validateEnv from '@utils/validateEnv'
+import validateEnv from './utils/validateEnv'
 
 //App Varaibles 
 dotenv.config()
