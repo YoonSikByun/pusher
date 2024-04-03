@@ -1,7 +1,8 @@
+# Node.js typescript 프로젝트 생성 완벽 가이드
+https://medium.com/@it.ermias.asmare/setting-up-expressjs-and-typescript-cfbee581c678
+
 # pusher
 Pusher installation guide
-
-https://medium.com/@it.ermias.asmare/setting-up-expressjs-and-typescript-cfbee581c678
 
 # npm init -y 
 # npm i express dotenv cors helmet body-parser 

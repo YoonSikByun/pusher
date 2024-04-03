@@ -13,12 +13,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/pusher-js": "^5.1.0",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "envalid": "^8.0.0",
     "express": "^4.19.2",
-    "helmet": "^7.1.0"
+    "helmet": "^7.1.0",
+    "nanoid": "^5.0.6",
+    "pusher": "^5.2.0",
+    "pusher-js": "^8.4.0-rc2"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
@@ -27,11 +31,14 @@
     "@types/helmet": "^4.0.0",
     "@types/node": "^20.12.3",
     "cross-env": "^7.0.3",
+    "install": "^0.13.0",
     "nodemon": "^3.1.0",
     "ts-node": "^10.9.2",
+    "ts-patch": "^3.1.2",
     "tsc-alias": "^1.8.8",
     "tsconfig-paths": "^4.2.0",
     "tslib": "^2.6.2",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.3",
+    "typescript-transform-paths": "^3.4.7"
   }
 }
