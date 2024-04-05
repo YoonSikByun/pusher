@@ -15,16 +15,25 @@ const client = new Client({
     password: 'postgres',
 });
 
+const notify_list = ['tmp_notify', 'dag_insert_notify', 'dag_update_notify'];
+
 export function initPsqlNotify() {
     client.connect();
 
-    client.query('LISTEN tmp_notify');
-    client.query('LISTEN dag_insert_notify');
-    client.query('LISTEN dag_update_notify');
-    
-    console.log('============= psql listen ================');
+    console.log('Subscribe notify ====================');
+    for(const index in notify_list) {
+        console.log(`LISTEN ${notify_list[index]}`);
+        client.query(`LISTEN ${notify_list[index]}`);
+    }
+
+    console.log('Postgres listen =====================');
     client.on('notification', async(data) => {
         const payload = JSON.parse(data.payload);
+        switch(data.channel) {
+            case 'dag_insert_notify':
+            case 'dag_update_notify':
+                return;
+        }
         console.log(`channel : ${data.channel}, processId : ${data.processId}, name : ${data.name}`);
         console.log('payload : \n', payload);
     });
