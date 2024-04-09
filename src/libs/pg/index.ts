@@ -15,6 +15,7 @@ const client = new Client({
     password: 'postgres',
 });
 
+//Postgres DB에서 Notify받을 것들 등록
 const notify_list = ['tmp_notify', 'dag_insert_notify', 'dag_update_notify'];
 
 export function initPsqlNotify() {

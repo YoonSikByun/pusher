@@ -8,9 +8,7 @@ initPsqlNotify();
 const express = require('express');
 var cors = require('cors')
 const app = express();
-
 const PORT = process.env.PORT || 3000
-
 const server = require('node:http').createServer(app);
 const io = require('socket.io')(server, {cors: {origin: '*',}});
 
@@ -31,4 +29,3 @@ io.on('connection', (socket) => {
 server.listen(PORT, () => {
    console.log(`listning on port ${PORT}`);
 });
-
